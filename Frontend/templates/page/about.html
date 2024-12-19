@@ -1,0 +1,156 @@
+<title>TheThechWay - About{% block title %}{% endblock title %}</title>
+
+{% block header %}
+  <div class="header-content">
+    <h2 class="homepage-element">About Us</h2>
+    <p class="homepage-subtitle">Learn more about our mission and team!</p>
+  </div>
+{% endblock header %}
+
+{% block content %}
+  <nav>
+    <ul>
+        <li><a href="{{ url_for('page.home') }}">Home</a></li>
+        <li><a href="{{ url_for('page.about') }}">About</a></li>
+        <li><a href="{{ url_for('page.shop') }}">Shop</a></li>
+        <li><a href="{{ url_for('page.cart') }}">Cart</a></li>
+        <li><a href="{{ url_for('page.chat') }}">Chat</a></li>
+        {% if session.get('user_id') %} 
+            <li><a href="{{ url_for('page.logout') }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ url_for('page.login') }}">Login</a></li>
+        {% endif %}
+        <li><a href="{{ url_for('page.About_You') }}">About You</a></li>
+        {% if session.get('user_id') == 1 %}
+            <li><a href="{{ url_for('page.adding') }}">Cart</a></li>
+        {% endif %}
+        <li><a href="{{ url_for('page.Construct') }}">Construct</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="homepage-element about-us">
+      <h3>Our Mission</h3>
+      <p>At Our PC Store, we strive to provide the best products for computer enthusiasts and professionals alike. Our goal is to offer an extensive range of top-quality products and unbeatable customer service. We believe in quality, value, and innovation.</p>
+
+      <h3>Our Team</h3>
+      <p>Our team consists of passionate individuals who are experts in their fields. From tech specialists to customer service representatives, everyone at Our PC Store is dedicated to helping you find the perfect PC solutions for your needs.</p>
+
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <li>Wide range of products</li>
+        <li>Competitive pricing</li>
+        <li>Excellent customer service</li>
+        <li>Fast shipping</li>
+      </ul>
+      <p>Join our community of tech enthusiasts and discover why we are the go-to source for computer components and accessories!</p>
+      
+      <h3>Contact Us</h3>
+      <p>If you have any questions or need assistance, feel free to reach out to our support team. We’re here to help!</p>
+    </div>
+
+    <div class="homepage-element testimonials">
+      <h3>What Our Customers Say</h3>
+      <blockquote>"Best online store for PC components! Fast shipping and great prices!" - <strong>Jane D.</strong></blockquote>
+      <blockquote>"I love my new gaming setup! Thank you for the excellent service!" - <strong>John S.</strong></blockquote>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block styles %}
+<style>
+  body {
+      background-color: #f5f5f5; /* Light background */
+      color: #333; /* Dark text for readability */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+  }
+  nav {
+      background-color: #2C3E50; /* Dark blue background for the navbar */
+      padding: 10px 20px; /* Padding for spacing */
+      border-radius: 5px; /* Rounded corners */
+      margin-bottom: 20px; /* Space below the navbar */
+  }
+
+  ul {
+      list-style-type: none; /* Remove default list styling */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      display: flex; /* Flexbox for horizontal layout */
+      justify-content: space-between; /* Space between menu items */
+  }
+  
+  li {
+      margin: 0 15px; /* Spacing between menu items */
+  }
+
+  a {
+      text-decoration: none; /* No underline */
+      color: white; /* White text */
+      font-weight: bold; /* Bold text for emphasis */
+      padding: 10px 15px; /* Padding for clickable areas */
+      border-radius: 5px; /* Rounded edges for the links */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  }
+
+  a:hover {
+      background-color: #34495e; /* Darker blue for hover effect */
+      color: #ecf0f1; /* Lighter text color on hover */
+  }
+
+  .header-content {
+      text-align: center;
+      margin-bottom: 40px;
+  }
+  .homepage-element {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  h2.homepage-element {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+  }
+  h3 {
+      color: #2C3E50; /* Darker color for headings */
+      font-size: 1.8em;
+      margin-bottom: 10px;
+  }
+  ul {
+      padding-left: 20px; /* Indent list for enhanced readability */
+  }
+  blockquote {
+      border-left: 4px solid #27ae60; /* Green line for quotes */
+      padding-left: 10px;
+      color: #555; /* Darker color for quotes */
+      font-style: italic;
+      margin: 10px 0 10px 20px;
+  }
+  .testimonials {
+      background: #eafaf1; /* Light green background for testimonials */
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+      nav {
+          padding: 10px; /* Adjust padding for mobile */
+      }
+      ul {
+          flex-direction: column; /* Stacked layout on small screens */
+          align-items: center; /* Center align items */
+      }
+      li {
+          margin: 5px 0; /* Vertical spacing for mobile */
+      }
+      .header-content {
+          margin-bottom: 20px; /* Less margin for mobile */
+      }
+  }
+</style>
+{% endblock styles %}

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PC Constructor{% endblock title %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .pc-build {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 2px dashed #007bff;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .component-slot {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px;
+            min-width: 200px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-title {
+            font-size: 1.2em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #28a745;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative; /* Positioning for footer */
+        }
+
+        @media (max-width: 768px) {
+            .pc-build {
+                flex-direction: column; /* Stack components vertically on smaller screens */
+            }
+
+            .component-slot {
+                width: 100%; /* Full width for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>PC Constructor</h1>
+    <nav>
+        <a href="#" style="color:white; margin-right:15px;">Home</a>
+        <a href="#" style="color:white;">Components</a>
+    </nav>
+</header>
+
+{% block content %}
+
+<div class="container">
+    <h2>Your PC Build</h2>
+
+    <div class="pc-build">
+        <div class="component-slot">
+            <h3>CPU</h3>
+            {% if selected_cpu %}
+                <img src="{{ selected_cpu[4] }}" alt="{{ selected_cpu[1] }}" class="product-image">
+                <p class="product-title">{{ selected_cpu[1] }}</p>
+                <p class="product-price">Price: ${{ selected_cpu[3] }}</p>
+            {% else %}
+                <p>Select a CPU</p>
+            {% endif %}
+        </div>
+
+        <div class="component-slot">
+            <h3>Motherboard</h3>
+            {% if selected_motherboard %}
+                <img src="{{ selected_motherboard[4] }}" alt="{{ selected_motherboard[1] }}" class="product-image">
+                <p class="product-title">{{ selected_motherboard[1] }}</p>
+                <p class="product-price">Price: ${{ selected_motherboard[3] }}</p>
+            {% else %}
+                <p>Select a Motherboard</p>
+            {% endif %}
+        </div>
+
+        <div class="component-slot">
+            <h3>RAM</h3>
+            {% if selected_ram %}
+                <img src="{{ selected_ram[4] }}" alt="{{ selected_ram[1] }}" class="product-image">
+                <p class="product-title">{{ selected_ram[1] }}</p>
+                <p class="product-price">Price: ${{ selected_ram[3] }}</p>
+            {% else %}
+                <p>Select RAM</p>
+            {% endif %}
+        </div>
+
+        <div class="component-slot">
+            <h3>GPU</h3>
+            {% if selected_gpu %}
+                <img src="{{ selected_gpu[4] }}" alt="{{ selected_gpu[1] }}" class="product-image">
+                <p class="product-title">{{ selected_gpu[1] }}</p>
+                <p class="product-price">Price: ${{ selected_gpu[3] }}</p>
+            {% else %}
+                <p>Select a GPU</p>
+            {% endif %}
+        </div>
+
+        <div class="component-slot">
+            <h3>Storage</h3>
+            {% if selected_storage %}
+                <img src="{{ selected_storage[4] }}" alt="{{ selected_storage[1] }}" class="product-image">
+                <p class="product-title">{{ selected_storage[1] }}</p>
+                <p class="product-price">Price: ${{ selected_storage[3] }}</p>
+            {% else %}
+                <p>Select Storage</p>
+            {% endif %}
+        </div>
+
+        <div class="component-slot">
+            <h3>Power Supply</h3>
+            {% if selected_power_supply %}
+                <img src="{{ selected_power_supply[4] }}" alt="{{ selected_power_supply[1] }}" class="product-image">
+                <p class="product-title">{{ selected_power_supply[1] }}</p>
+                <p class="product-price">Price: ${{ selected_power_supply[3] }}</p>
+            {% else %}
+                <p>Select Power Supply</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <h2>Available PC Components</h2>
+
+    <div class="product-list">
+        {% for product in products %}
+        <div class="product-card">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; {{ current_year }} PC Constructor. All rights reserved.</p>
+</footer>
+
+{% endblock content %}
+
+</body>
+</html>

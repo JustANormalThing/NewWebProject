@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="../static/style.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black; /* Light background color */
+            margin: 0;
+            padding: 20px; /* Padding around the body */
+        }
+
+        h1 {
+            text-align: center; /* Center the heading */
+            color: #333; /* Dark color for the heading */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Remove space between cells */
+            margin-top: 20px; /* Space above the table */
+        }
+
+        th, td {
+            padding: 12px; /* Padding inside cells */
+            text-align: left; /* Align text to the left */
+            border-bottom: 1px solid #ddd; /* Light gray border at the bottom of rows */
+        }
+
+        th {
+            background-color: #007bff; /* Blue background for header */
+            color: white; /* White text for header */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Light gray on hover */
+        }
+
+        button {
+            background-color: #dc3545; /* Red button color */
+            color: white; /* White text for button */
+            border: none;
+            padding: 8px 12px; /* Padding inside button */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        button:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+
+        .continue-shopping {
+            display: block;
+            margin-top: 20px; /* Space above the link */
+            text-align: center; /* Center the link */
+            font-size: 18px; /* Larger font size */
+            color: #007bff; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .continue-shopping:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        {% for item in items %}
+            <tr>
+                <td>{{ item[1] }}</td>
+                <td>Руб {{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <td>Руб {{ item[2] * item[3] }}</td>
+                <td>
+                    <form action="{{ url_for('page.remove_from_cart', product_id=item[0]) }}" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <a class="continue-shopping" href="{{ url_for('page.login') }}">Continue Shopping</a>
+    <a class="continue-shopping" href="{{ url_for('page.payment') }}">Proceed to Payment</a>
+
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+</body>
+</html>
+{% endblock header %}

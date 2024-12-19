@@ -1,0 +1,24 @@
+.homepage-element {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .product-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .product-item {
+    text-align: center;
+  }
+  
+  .category-list {
+    list-style-type: none;
+  }
+  
+  .category-list li {
+    margin: 5px 0;
+  }
+  

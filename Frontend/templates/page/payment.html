@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="../static/style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Your existing CSS styles */
+    </style>
+</head>
+<body>
+    <h1>Payment</h1>
+    <table>
+        <tr>
+        </tr>
+        {% for item in items %}
+            <tr>
+                <td>{{ item[1] }}</td>
+                <td>${{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <td>${{ item[2] * item[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h3 style="text-align: center;">Total: ${{ total }}</h3>
+
+    <form action="{{ url_for('page.payment') }}" method="POST">
+        <input type="text" name="card_number" placeholder="Card Number" required>
+        <input type="text" name="expiry_date" placeholder="Expiry Date (MM/YY)" required>
+        <input type="text" name="cvc" placeholder="CVC" required>
+        <button type="submit" class="payment-button">Make Payment</button>
+    </form>
+
+    <a class="continue-shopping" href="{{ url_for('page.cart') }}">Back to Cart</a>
+</body>
+</html>
+{% endblock header %}

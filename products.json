@@ -1,0 +1,541 @@
+[
+    {
+        "id": 1,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 2,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 5,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 8,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 11,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 14,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 17,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 20,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 23,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 26,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 29,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 31,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 32,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 34,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 35,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 36,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 37,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 38,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 39,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 40,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 41,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 42,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 43,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 44,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 45,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 46,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 47,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 48,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 49,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 50,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 51,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 52,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 53,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 54,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 55,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 56,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 57,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 58,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 59,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 60,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 61,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 62,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 63,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 64,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 65,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 66,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 67,
+        "name": "Gaming PC",
+        "description": "High performance gaming PC",
+        "price": 999.99,
+        "image_url": "path/to/gaming_pc.jpg"
+    },
+    {
+        "id": 68,
+        "name": "High-Performance Laptop",
+        "description": "Perfect for gaming and work",
+        "price": 1299.99,
+        "image_url": "path/to/laptop.jpg"
+    },
+    {
+        "id": 69,
+        "name": "Gaming Monitor",
+        "description": "Ultra HD gaming monitor",
+        "price": 299.99,
+        "image_url": "path/to/monitor.jpg"
+    },
+    {
+        "id": 70,
+        "name": "test",
+        "description": "test",
+        "price": 12.0,
+        "image_url": "123"
+    },
+    {
+        "id": 71,
+        "name": "test",
+        "description": "test",
+        "price": 12.0,
+        "image_url": "123"
+    },
+    {
+        "id": 72,
+        "name": "test",
+        "description": "12",
+        "price": 12.0,
+        "image_url": "12"
+    },
+    {
+        "id": 73,
+        "name": "Test",
+        "description": "Test for Product",
+        "price": 1000.0,
+        "image_url": "Not testing"
+    },
+    {
+        "id": 74,
+        "name": "test",
+        "description": "test",
+        "price": 23.0,
+        "image_url": "123"
+    },
+    {
+        "id": 75,
+        "name": "e",
+        "description": "ew",
+        "price": 2323.0,
+        "image_url": "124"
+    },
+    {
+        "id": 76,
+        "name": "12",
+        "description": "12",
+        "price": 12.0,
+        "image_url": "https://chatgptfree.ai/wp-content/uploads/2023/08/chatgpt-free-icon-min.png"
+    },
+    {
+        "name": "1",
+        "description": "1",
+        "price": "1",
+        "image_url": "1",
+        "id": 78
+    }
+]

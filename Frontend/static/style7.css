@@ -1,0 +1,93 @@
+  .body {
+    font-family: 'Roboto', sans-serif; /* Use a popular Google Font */
+    background-color: #f8f9fa; /* Lighter background for contrast */
+    margin: 0;
+    padding: 20px;
+    color: #343a40; /* A dark color for text */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the container */
+    background: white; /* White background for the container */
+  }
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); /* Larger minimum card size */
+    gap: 20px;
+  }
+
+  .product-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Combine transformations on hover */
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto; /* Flexible height */
+    max-height: 180px; /* Set a maximum height */
+    object-fit: contain; /* Preserve aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .product-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #007bff; /* Link color for product titles */
+  }
+
+  .product-description {
+    font-size: 0.9em;
+    color: #6c757d; /* Secondary text color */
+    margin: 10px 0;
+  }
+
+  .product-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #28a745; /* Green color for price */
+  }
+
+  .add-to-cart-btn {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+  }
+
+  .add-to-cart-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+  }
+
+  @media (max-width: 600px) {
+    .product-card {
+      padding: 15px; /* Smaller padding on smaller screens */
+    }
+
+    .product-title {
+      font-size: 1.3em; /* Slightly smaller titles for mobile */
+    }
+
+    .product-price {
+      font-size: 1.1em; /* Adjust price font size */
+    }
+  }
+

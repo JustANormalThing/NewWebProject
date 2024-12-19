@@ -1,0 +1,50 @@
+[
+    {
+        "user_message": "hello",
+        "user_feedback": "yes",
+        "predicted_intent": "greeting",
+        "timestamp": "2024-11-11 17:27:34"
+    },
+    {
+        "user_message": "apple",
+        "user_feedback": "yes",
+        "predicted_intent": "product_inquiry",
+        "timestamp": "2024-11-11 17:28:48"
+    },
+    {
+        "user_message": "apple",
+        "user_feedback": "yes",
+        "predicted_intent": "product_inquiry",
+        "timestamp": "2024-11-11 17:29:14"
+    },
+    {
+        "user_message": "apple",
+        "user_feedback": "yes",
+        "predicted_intent": "product_inquiry",
+        "timestamp": "2024-11-11 17:29:21"
+    },
+    {
+        "user_message": "apple",
+        "user_feedback": "yes",
+        "predicted_intent": "product_inquiry",
+        "timestamp": "2024-11-11 17:29:38"
+    },
+    {
+        "user_message": "pc",
+        "user_feedback": "no",
+        "predicted_intent": "greeting",
+        "timestamp": "2024-11-11 17:29:48"
+    },
+    {
+        "user_message": "pc",
+        "user_feedback": "no",
+        "predicted_intent": "greeting",
+        "timestamp": "2024-11-11 17:30:03"
+    },
+    {
+        "user_message": "pc",
+        "user_feedback": "no",
+        "predicted_intent": "greeting",
+        "timestamp": "2024-11-11 17:30:47"
+    }
+]

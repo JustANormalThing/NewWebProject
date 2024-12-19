@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TheTechWay - Shop{% endblock title %}</title>
+    {% block styles %}
+    <style>
+        .homepage-element {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2.homepage-element {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #2C3E50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        li {
+            margin: 0 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: slideDown 0.5s ease;
+        }
+
+        .header-container h1 {
+            font-size: 2.8em;
+            color: #2C3E50;
+        }
+
+        .search-bar {
+            margin: 20px 0;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .product-item {
+            background: white;
+            margin: 15px;
+            border-radius: 8px;
+            padding: 20px;
+            width: calc(30% - 30px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 0.2s; /* Default for all product items if no other defined */
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #27ae60;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #219150;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .product-item {
+                width: calc(45% - 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-item {
+                width: calc(100% - 30px);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Fade to visible */
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px); /* Start above */
+                opacity: 0; /* Start hidden */
+            }
+            to {
+                transform: translateY(0); /* End position */
+                opacity: 1; /* Become visible */
+            }
+        }
+
+        .filter-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    {% endblock styles %}
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="homepage-element">Shop</h1>
+            <p class="homepage-subtitle">Learn more about our mission and team!</p>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('page.home') }}">Home</a></li>
+                    <li><a href="{{ url_for('page.about') }}">About</a></li>
+                    <li><a href="{{ url_for('page.shop') }}">Shop</a></li>
+                    <li><a href="{{ url_for('page.cart') }}">Cart</a></li>
+                    <li><a href="{{ url_for('page.chat') }}">Chat</a></li>
+                    {% if session.get('user_id') %}
+                        <li><a href="{{ url_for('page.logout') }}">Logout</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('page.login') }}">Login</a></li>
+                    {% endif %}
+                    <li><a href="{{ url_for('page.About_You') }}">About You</a></li>
+                    {% if session.get('user_id') == 1 %}
+                        <li><a href="{{ url_for('page.adding') }}">Add to Cart</a></li>
+                    {% endif %}
+                    <li><a href="{{ url_for('page.Construct') }}">Construct</a></li>
+                </ul>
+            </nav>
+            <form class="search-bar" method="GET" action="/search">
+                <input type="text" name="query" placeholder="Search for products..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <h2>Product List</h2>
+
+        <!-- Filter Options -->
+        <div class="filter-container">
+            <h3>Filter By Category:</h3>
+            <div>
+                <label><input type="checkbox" class="category-filter" value="Electronics"> PC</label>
+                <label><input type="checkbox" class="category-filter" value="Books"> Test</label>
+                <label><input type="checkbox" class="category-filter" value="Clothing"> Test</label>
+            </div>
+
+            <h3>Filter By Price:</h3>
+            <input type="range" id="priceRange" min="0" max="10000" value="10000" step="1">
+            <span id="priceValue">Руб 10000</span>
+        </div>
+
+        <div class="product-list">
+            {% for product in products %}
+                <div class="product-item" data-category="{{ product[5] }}" data-price="{{ product[3] }}" style="animation-delay:  loopindex0 * 0.1 ">
+                    <img src="{{ product[4] }}" alt="{{ product[1] }}">
+                    <h3>{{ product[1] }}</h3>
+                    <p>{{ product[2] }}</p>
+                    <p class="price">Руб {{ product[3] }}</p>
+                    <a href="/product/{{ product[0] }}" class="btn">View Details</a>
+                    <a href="{{ url_for('page.add_to_cart', product_id=product[0]) }}" class="btn">Add to Cart</a>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <p>© {{ current_year }} PC Shop - Your one-stop shop for all things PC!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            const priceRange = document.getElementById('priceRange');
+            const priceValue = document.getElementById('priceValue');
+            const productItems = document.querySelectorAll('.product-item');
+
+            // Function to filter products
+            function filterProducts() {
+                const selectedCategories = Array.from(categoryFilters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+                const selectedPrice = parseFloat(priceRange.value);
+
+                productItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    const itemPrice = parseFloat(item.getAttribute('data-price'));
+
+                    const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(itemCategory);
+                    const priceMatch = itemPrice <= selectedPrice;
+
+                    if (categoryMatch && priceMatch) {
+                        item.style.display = 'block'; // Show item
+                    } else {
+                        item.style.display = 'none'; // Hide item
+                    }
+                });
+            }
+
+            // Event listeners for category filters
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('change', filterProducts);
+            });
+
+            // Event listener for price range
+            priceRange.addEventListener('input', function () {
+                priceValue.textContent = `$${this.value}`;
+                filterProducts(); // Call filter function on price change
+            });
+
+            // Initial display value for price label
+            priceValue.textContent = `Руб ${priceRange.value}`;
+        });
+    </script>
+</body>
+</html>

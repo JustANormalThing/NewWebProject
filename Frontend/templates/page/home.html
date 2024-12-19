@@ -1,0 +1,227 @@
+
+<title>TheThechWay - Home {% block title %}{% endblock title %}</title>
+
+{% block header %}
+  <div class="header-content">
+    <h2 class="homepage-element">Welcome to Our PC Store</h2>
+    <p class="homepage-subtitle">Your one-stop shop for all things PC!</p>
+  </div>
+{% endblock header %}
+
+{% block content %}
+  <nav>
+    <ul>
+        <li><a href="{{ url_for('page.home') }}">Home</a></li>
+        <li><a href="{{ url_for('page.about') }}">About</a></li>
+        <li><a href="{{ url_for('page.shop') }}">Shop</a></li>
+        <li><a href="{{ url_for('page.cart') }}">Cart</a></li>
+        <li><a href="{{ url_for('page.chat') }}">Chat</a></li>
+        {% if session.get('user_id') %} <!-- Check if user is logged in -->
+            <li><a href="{{ url_for('page.logout') }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ url_for('page.login') }}">Login</a></li>
+        {% endif %}
+        <li><a href="{{ url_for('page.About_You') }}">About You</a></li>
+        {% if session.get('user_id') == 1 %}
+            <li><a href="{{ url_for('page.adding') }}">Cart</a></li>
+        {% endif %}
+        <li><a href="{{ url_for('page.Construct') }}">Construct</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="homepage-element featured-products">
+      <h3>Featured Products</h3>
+      <div class="product-list">
+        <div class="product-item">
+          <img src="path/to/product1.jpg" alt="Product 1" class="product-image">
+          <h4>Gaming PC</h4>
+          <p class="product-price"> Руб 999.99</p>
+          <a href="{{ url_for('page.shop') }}" class="btn btn-primary">View Details</a>
+        </div>
+        <div class="product-item">
+          <img src="path/to/product2.jpg" alt="Product 2" class="product-image">
+          <h4>High-Performance Laptop</h4>
+          <p class="product-price">Руб 1299.99</p>
+          <a href="{{ url_for('page.shop') }}" class="btn btn-primary">View Details</a>
+        </div>
+        <div class="product-item">
+          <img src="path/to/product3.jpg" alt="Product 3" class="product-image">
+          <h4>Gaming Monitor</h4>
+          <p class="product-price">Руб 299.99</p>
+          <a href="{{ url_for('page.shop') }}" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage-element categories">
+      <h3>Categories</h3>
+      <ul class="category-list">
+        <li><a href="/category/gaming-pcs" class="category-item">Gaming PCs</a></li>
+        <li><a href="/category/laptops" class="category-item">Laptops</a></li>
+        <li><a href="/category/accessories" class="category-item">Accessories</a></li>
+        <li><a href="/category/peripherals" class="category-item">Peripherals</a></li>
+      </ul>
+    </div>
+
+    <div class="homepage-element latest-news">
+      <h3>Latest News</h3>
+      <p>Stay updated with our latest arrivals and special offers!</p>
+      <a href="{{ url_for('page.about') }}" class="btn btn-secondary">Read More</a>
+    </div>
+
+    <div class="homepage-element testimonials">
+      <h3>Customer Testimonials</h3>
+      <blockquote>"Best online store for PC components! Fast shipping and great prices!" - <strong>Jane D.</strong></blockquote>
+      <blockquote>"I love my new gaming setup! Thank you for the excellent service!" - <strong>John S.</strong></blockquote>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block styles %}
+<style>
+    body {
+        background-color: #f5f5f5; /* Light background */
+        color: #333; /* Dark text for readability */
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    nav {
+        background-color: #2C3E50; /* Dark blue background for the navbar */
+        padding: 10px 20px; /* Padding for spacing */
+        border-radius: 5px; /* Rounded corners */
+        margin-bottom: 20px; /* Space below the navbar */
+    }
+
+    ul {
+        list-style-type: none; /* Remove default list styling */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Flexbox for horizontal layout */
+        justify-content: space-between; /* Space between menu items */
+    }
+    
+    li {
+        margin: 0 15px; /* Spacing between menu items */
+    }
+
+    a {
+        text-decoration: none; /* No underline */
+        color: white; /* White text */
+        font-weight: bold; /* Bold text for emphasis */
+        padding: 10px 15px; /* Padding for clickable areas */
+        border-radius: 5px; /* Rounded edges for the links */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    }
+
+    a:hover {
+        background-color: #34495e; /* Darker blue for hover effect */
+        color: #ecf0f1; /* Lighter text color on hover */
+    }
+
+    .header-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .homepage-element {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+    h2.homepage-element {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    h3 {
+        color: #2C3E50; /* Darker color for headings */
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    .product-list {
+        display: flex; /* Flexbox for layout */
+        justify-content: space-between;
+        flex-wrap: wrap; /* Wrap on smaller screens */
+    }
+    .product-item {
+        background: #f9f9f9; /* Light background for products */
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        flex: 1 1 calc(30% - 20px); /* Responsive width */
+        margin: 10px; /* Space between items */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s; /* Smooth effect */
+    }
+    .product-item:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    }
+    .product-image {
+        max-width: 100%; /* Responsive image */
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    .product-price {
+        font-size: 1.5em;
+        color: #27ae60; /* Green color for prices */
+        margin: 10px 0;
+    }
+    .category-list {
+        list-style-type: none; /* No bullets */
+        padding: 0;
+    }
+    .category-item {
+        display: block;
+        padding: 10px;
+        background: #e0e0e0; /* Light background for categories */
+        margin: 5px 0;
+        border-radius: 5px;
+        text-decoration: none; /* No underline */
+        color: #333; /* Text color */
+        transition: background 0.3s;
+    }
+    .category-item:hover {
+        background: #d5d5d5; /* Darker on hover */
+    }
+    blockquote {
+        border-left: 4px solid #27ae60; /* Green line for quotes */
+        padding-left: 10px;
+        color: #555; /* Darker color for quotes */
+        font-style: italic;
+        margin: 10px 0 10px 20px;
+    }
+    .btn {
+        background-color: #27ae60; /* Primary button color */
+        color: white; /* Button text color */
+        padding: 10px 15px;
+        text-decoration: none; /* No underline */
+        border-radius: 5px;
+        transition: background 0.3s; /* Smooth transition */
+    }
+    .btn:hover {
+        background-color: #219150; /* Darker green on hover */
+    }
+    .btn-secondary {
+        background-color: #3498db; /* Secondary button color */
+    }
+    .btn-secondary:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 600px) {
+        nav {
+            padding: 10px; /* Adjust padding for mobile */
+        }
+        ul {
+            flex-direction: column; /* Stacked layout on small screens */
+            align-items: center; /* Center align items */
+        }
+        li {
+            margin: 5px 0; /* Vertical spacing for mobile */
+        }
+    }
+</style>
+{% endblock styles %}

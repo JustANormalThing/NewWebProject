@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block header %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style6.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat For Help</h1>
+        <div id="chatbox">
+            <!-- Chat messages will appear here -->
+        </div>
+        <input type="text" id="user-input" placeholder="Type a message..." />
+        <button id="send-button">Send</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#send-button').click(function() {
+                let userMessage = $('#user-input').val();
+                $('#chatbox').append(`<div>User: ${userMessage}</div>`);
+                $('#user-input').val('');
+
+                $.ajax({
+                    url: '/ask',
+                    method: 'POST',
+                    data: { message: userMessage },
+                    success: function(data) {
+                        $('#chatbox').append(`<div>AI: ${data.message}</div>`);
+                        $('#chatbox').append(`<div>Feedback: ${data.feedback_prompt}</div>`); // Show feedback prompt
+
+                        // Create input for feedback
+                        $('#chatbox').append(`
+                            <input id="feedback-input" placeholder="Type 'yes' or 'no'" />
+                            <button id="feedback-button">Submit Feedback</button>
+                        `);
+
+                        // Attach feedback submission handler
+                        $('#feedback-button').off('click').click(function() {
+                            let feedback = $('#feedback-input').val().toLowerCase();
+                            $.ajax({
+                                url: '/feedback',
+                                method: 'POST',
+                                data: {
+                                    message: userMessage,
+                                    feedback: feedback,
+                                    predicted_intent: data.predicted_intent // send intent for feedback
+                                },
+                                success: function(feedbackData) {
+                                    $('#chatbox').append(`<div>AI: ${feedbackData.message}</div>`);
+                                    $('#feedback-input').val(''); // clear feedback input
+                                }
+                            });
+                        });
+
+                        $('#feedback-input').keypress(function(event) {
+                            if (event.which === 13) { // Enter key pressed
+                                $('#feedback-button').click();
+                            }
+                        });
+                    }
+                });
+            });
+
+            $('#user-input').keypress(function(event) {
+                if (event.which === 13) { // Enter key pressed
+                    $('#send-button').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+{% endblock header %}

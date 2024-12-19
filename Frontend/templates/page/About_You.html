@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Dark background for contrast */
+            margin: 0;
+            padding: 20px;
+            color: #ffffff; /* Text color for better readability */
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background: linear-gradient(145deg, #1e1e1e, #232323); /* Gradient for the container */
+            border-radius: 12px; /* Rounded edges */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s; /* Hover effects */
+        }
+        .container:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+        }
+        h1 {
+            color: #f0f0f0;
+            text-align: center; /* Center the main heading */
+            margin-bottom: 20px; /* Space below the title */
+            font-size: 2.5em; /* Larger heading */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Text shadow for depth */
+        }
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: block; /* Center the image */
+            margin: 20px auto; /* Center the image */
+            border: 3px solid #ffcc00; /* Gold border to highlight the profile picture */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add some shadow to the profile picture */
+        }
+        .admin {
+            color: #ffcc00; /* Gold color for admin privileges */
+            font-weight: bold; /* Bold text for emphasis */
+        }
+        h2 {
+            border-bottom: 1px solid #444; /* Underline for section separation */
+            padding-bottom: 10px; /* Space below the heading */
+            margin-top: 20px; /* Space above the heading */
+            font-size: 1.4em; /* Slightly larger for visibility */
+            color: #e0e0e0; /* Lighter color for headings */
+        }
+        span.password {
+            color: #ccc; /* Masked password color */
+            letter-spacing: 2px; /* Improved visibility */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px; /* Smaller padding on smaller screens */
+            }
+            h1 {
+                font-size: 2em; /* Responsive heading size */
+            }
+            h2 {
+                font-size: 1.2em; /* Responsive subheading size */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Profile Page</h1>
+
+    <img src="{{ user.ProfilePictureURL }}" alt="Profile Picture" class="profile-pic">
+
+    <h2>Username: {{ user.UserName }}</h2>
+    <h2>Email: {{ user.UserEmail }}</h2>
+    <h2>Password: <span class="password">{{ user.UserPassword }}</span></h2> <!-- Masking the password for security -->
+
+    {% if user.UserName == '12' %}
+        <h2 class="admin">You have Admin privileges.</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
+
+{% endblock header %}

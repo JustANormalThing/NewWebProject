@@ -1,0 +1,377 @@
+[
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "removed",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 5,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 13,
+        "action": "removed_one",
+        "resultant_quantity": 12
+    },
+    {
+        "product_id": 8,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 9,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 9,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 1,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 3,
+        "action": "removed_one",
+        "resultant_quantity": 1
+    },
+    {
+        "product_id": 3,
+        "action": "removed",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "removed_one",
+        "resultant_quantity": 5
+    },
+    {
+        "product_id": 3,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "removed_one",
+        "resultant_quantity": 4
+    },
+    {
+        "product_id": 4,
+        "action": "removed_one",
+        "resultant_quantity": 3
+    },
+    {
+        "product_id": 4,
+        "action": "removed_one",
+        "resultant_quantity": 2
+    },
+    {
+        "product_id": 4,
+        "action": "removed_one",
+        "resultant_quantity": 1
+    },
+    {
+        "product_id": 4,
+        "action": "removed",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 5,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 5,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 5,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 5,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 6,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 5,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 6,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 7,
+        "action": "removed_one",
+        "resultant_quantity": 5
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 5,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 14,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 17,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 18,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    },
+    {
+        "product_id": 4,
+        "action": "not_found",
+        "resultant_quantity": 0
+    }
+]

@@ -1,0 +1,68 @@
+<style>
+  /* Navigation Bar Styles */
+  nav {
+      background-color: #2C3E50; /* Dark blue background for the navbar */
+      padding: 10px 20px; /* Padding for spacing */
+      border-radius: 5px; /* Rounded corners */
+  }
+
+  ul {
+      list-style-type: none; /* Remove default list styling */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      display: flex; /* Flexbox for horizontal layout */
+      justify-content: space-between; /* Space between menu items */
+  }
+  
+  li {
+      margin: 0 15px; /* Spacing between menu items */
+  }
+
+  a {
+      text-decoration: none; /* No underline */
+      color: white; /* White text */
+      font-weight: bold; /* Bold text for emphasis */
+      padding: 10px 15px; /* Padding for clickable areas */
+      border-radius: 5px; /* Rounded edges for the links */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  }
+
+  a:hover {
+      background-color: #34495e; /* Darker blue for hover effect */
+      color: #ecf0f1; /* Lighter text color on hover */
+  }
+
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+      nav {
+          padding: 10px; /* Adjust padding for mobile */
+      }
+      ul {
+          flex-direction: column; /* Stacked layout on small screens */
+          align-items: center; /* Center align items */
+      }
+      li {
+          margin: 5px 0; /* Vertical spacing for mobile */
+      }
+  }
+</style>
+
+<nav>
+  <ul>
+      <li><a href="{{ url_for('page.home') }}">Home</a></li>
+      <li><a href="{{ url_for('page.about') }}">About</a></li>
+      <li><a href="{{ url_for('page.shop') }}">Shop</a></li>
+      <li><a href="{{ url_for('page.cart') }}">Cart</a></li>
+      <li><a href="{{ url_for('page.chat') }}">Chat</a></li>
+      {% if session.get('user_id') %} <!-- Check if user is logged in -->
+          <li><a href="{{ url_for('page.logout') }}">Logout</a></li>
+      {% else %}
+          <li><a href="{{ url_for('page.login') }}">Login</a></li>
+      {% endif %}
+      <li><a href="{{ url_for('page.About_You') }}">About You</a></li>
+      {% if session.get('user_id') == 1 %}
+          <li><a href="{{ url_for('page.adding') }}">Cart</a></li>
+      {% endif %}
+      <li><a href="{{ url_for('page.Construct') }}">Construct</a></li>
+  </ul>
+</nav>
