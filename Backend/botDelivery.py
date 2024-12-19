@@ -9,7 +9,7 @@ app = Flask(__name__)
 bp = Blueprint("botDelievry", __name__)
 
 # Initialize the Telegram bot with your token
-TELEGRAM_TOKEN = '7615059144:AAGHw8yKLgbAMqqmgAvJw-Gu3Jvw1CAdxlc'  # Replace with your actual token
+TELEGRAM_TOKEN =   # Replace with your actual token
 bot = Bot(token=TELEGRAM_TOKEN)
 # Example chat ID - replace with your actual chat ID
 CHAT_ID = '5672534941'  # Replace with the actual chat ID
